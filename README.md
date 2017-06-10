@@ -6,7 +6,7 @@ A API endpoint provider to comunicate with robots in huge distances.
 
 This project was coded on top of Spring Framework, to provide a beautiful REST API, easy to use, and easy to maintain.
 
-Uses Maven as a dependency manager. If you want to contribute, you only need to import this project on your favourite IDE, and let Maven let things done for you.
+Uses Maven as a dependency manager. If you want to contribute, you only need to import this project on your favourite IDE, and let Maven get things done for you.
 
 ### Testing
 
