@@ -20,11 +20,23 @@ public class RobotHoverTest {
 	}
 	
 	@Test
-	public void testRobotHoverMovement() {
+	public void testRobotHoverMovementTurningToRight() {
 		robotHover.move("MMRMMRMM");
 		Assert.assertEquals("(2, 0, S)", robotHover.getActualSpot());
 	}
 
+	@Test
+	public void testRobotHoverMovementTurningToLeft() {
+		robotHover.move("MMRMMLMM");
+		Assert.assertEquals("(2, 4, N)", robotHover.getActualSpot());
+	}
+	
+	@Test
+	public void testRobotHoverMovementWithFullInstructions() {
+		robotHover.move("MMRMMLMMLM");
+		Assert.assertEquals("(1, 4, W)", robotHover.getActualSpot());
+	}	
+	
 	@Test(expected=BadInstructionException.class)
 	public void testRobotHoverBadRequestMovementCommand() {
 		robotHover.move("AAA");

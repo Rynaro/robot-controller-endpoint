@@ -43,11 +43,19 @@ public class MagnometerTest {
 		Assert.assertEquals(CardinalDirection.SOUTH, magnometerInstrument.actualMagnometerSpot());
 	}
 	
-
 	@Test
 	public void testRotateMagnometerToNorth() {
 		magnometerInstrument.rotate("R");
 		magnometerInstrument.rotate("L");
+		Assert.assertEquals(CardinalDirection.NORTH, magnometerInstrument.actualMagnometerSpot());
+	}
+	
+	@Test
+	public void testFullRotationMagnometerEndingToNorth() {
+		magnometerInstrument.rotate("R");
+		magnometerInstrument.rotate("R");
+		magnometerInstrument.rotate("R");
+		magnometerInstrument.rotate("R");
 		Assert.assertEquals(CardinalDirection.NORTH, magnometerInstrument.actualMagnometerSpot());
 	}
 	
